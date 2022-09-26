@@ -1,0 +1,63 @@
+body {
+    height: 100vh;
+    background-color: rgb(75, 75, 75) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 6px solid rgb(248, 248, 248);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+.arrow {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+}
+.h {
+    width: 20px;
+    height: 80px;
+    background-color: brown;
+    top: calc(50% - 10px);
+    transform: rotate(20deg);
+    transform-origin: center 10px;
+    animation: round 220s linear infinite;
+}
+.m {
+    height: 110px;
+    width: 10px;
+    background-color: darkcyan;
+    top: calc(50% - 5px);
+    transform:rotate(100deg);
+    transform-origin: center 5px;
+    animation: round 180s linear infinite;
+}
+.s {
+    height: 130px;
+    width: 4px;
+    background-color: darkorange;
+    top: calc(50% - 2px);
+    transform: rotate(200deg);
+    transform-origin: center 2px;
+    animation: round 60s linear infinite;
+
+}
+@keyframes round {
+    100% {
+        transform: rotate(360deg);
+    }
+}
